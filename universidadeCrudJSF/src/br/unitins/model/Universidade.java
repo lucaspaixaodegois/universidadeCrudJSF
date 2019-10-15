@@ -1,62 +1,37 @@
 package br.unitins.model;
 
-import java.util.List;
+import java.io.Serializable;
+import java.lang.Integer;
+import java.lang.String;
+import javax.persistence.*;
 
-public class Universidade {
+@Entity
 
-	private Integer codigo;
+public class Universidade implements Serializable {
+
+	@Id
+	private Integer id;
 	private String nome;
-	private String campus;
-	private String cnpj;
-	private List<Professor> doscentes;
-	private List<Aluno> discentes;
+	private static final long serialVersionUID = 1L;
 
-	public Integer getCodigo() {
-		return codigo;
+	public Universidade() {
+		super();
 	}
 
-	public void setCodigo(Integer codigo) {
-		this.codigo = codigo;
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getNome() {
-		return nome;
+		return this.nome;
 	}
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public String getCampus() {
-		return campus;
-	}
-
-	public void setCampus(String campus) {
-		this.campus = campus;
-	}
-
-	public String getCnpj() {
-		return cnpj;
-	}
-
-	public void setCnpj(String cnpj) {
-		this.cnpj = cnpj;
-	}
-
-	public List<Professor> getDoscentes() {
-		return doscentes;
-	}
-
-	public void setDoscentes(List<Professor> doscentes) {
-		this.doscentes = doscentes;
-	}
-
-	public List<Aluno> getDiscentes() {
-		return discentes;
-	}
-
-	public void setDiscentes(List<Aluno> discentes) {
-		this.discentes = discentes;
 	}
 
 }
