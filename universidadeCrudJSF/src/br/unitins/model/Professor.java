@@ -2,10 +2,16 @@ package br.unitins.model;
 
 import java.util.List;
 
+import javax.persistence.*;
+
+@Entity
 public class Professor extends Usuario {
 
+	@GeneratedValue
 	private Integer codigo;
+	@Column
 	private String campus;
+	@Column
 	private List<Disciplina> disciplinas;
 
 	public Integer getCodigo() {

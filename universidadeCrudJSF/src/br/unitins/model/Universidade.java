@@ -1,18 +1,15 @@
 package br.unitins.model;
 
-import java.io.Serializable;
-import java.lang.Integer;
-import java.lang.String;
 import javax.persistence.*;
 
 @Entity
-
-public class Universidade implements Serializable {
+public class Universidade {
 
 	@Id
+	@GeneratedValue
 	private Integer id;
+	@Column
 	private String nome;
-	private static final long serialVersionUID = 1L;
 
 	public Universidade() {
 		super();

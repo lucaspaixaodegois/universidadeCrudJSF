@@ -1,10 +1,19 @@
 package br.unitins.model;
 
+import java.io.Serializable;
 
-public class Curso {
+import javax.persistence.*;
 
+@Entity
+public class Curso implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue
 	private Integer codigo;
+	@Column
 	private String nome;
+	@Column
 	private Integer cargaHoraria;
 
 	public Integer getCodigo() {
@@ -30,4 +39,6 @@ public class Curso {
 	public void setCargaHoraria(Integer cargaHoraria) {
 		this.cargaHoraria = cargaHoraria;
 	}
+
+
 }

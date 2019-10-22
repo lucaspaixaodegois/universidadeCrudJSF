@@ -2,8 +2,11 @@ package br.unitins.model;
 
 import java.util.List;
 
+import javax.persistence.*;
+@Entity
 public class Disciplina {
-
+@Id
+@GeneratedValue
 	private Integer codigo;
 	private String nome;
 	private Integer cargaHoraria;

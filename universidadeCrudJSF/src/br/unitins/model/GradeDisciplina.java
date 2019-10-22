@@ -2,13 +2,17 @@ package br.unitins.model;
 
 import java.util.List;
 
-public class GradeDisciplina {
+import javax.persistence.*;
 
+@Entity
+public class GradeDisciplina {
+	@Id
+	@GeneratedValue
 	private Integer codigo;
-	private String nome;
-	private String campus;
-	private String cnpj;
-	private List<Aluno> discentes;
+	@Column
+	private Integer ano;
+	@Column
+	private List<Periodo> perido;
 
 	public Integer getCodigo() {
 		return codigo;
@@ -18,36 +22,20 @@ public class GradeDisciplina {
 		this.codigo = codigo;
 	}
 
-	public String getNome() {
-		return nome;
+	public Integer getAno() {
+		return ano;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setAno(Integer ano) {
+		this.ano = ano;
 	}
 
-	public String getCampus() {
-		return campus;
+	public List<Periodo> getPerido() {
+		return perido;
 	}
 
-	public void setCampus(String campus) {
-		this.campus = campus;
-	}
-
-	public String getCnpj() {
-		return cnpj;
-	}
-
-	public void setCnpj(String cnpj) {
-		this.cnpj = cnpj;
-	}
-
-	public List<Aluno> getDiscentes() {
-		return discentes;
-	}
-
-	public void setDiscentes(List<Aluno> discentes) {
-		this.discentes = discentes;
+	public void setPerido(List<Periodo> perido) {
+		this.perido = perido;
 	}
 
 }

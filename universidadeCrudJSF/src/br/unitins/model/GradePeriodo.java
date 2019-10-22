@@ -2,10 +2,18 @@ package br.unitins.model;
 
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.*;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity
 public class GradePeriodo {
-
+	@Id
+	@GeneratedValue
 	private Integer codigo;
+	@Column
 	private Periodo periodo;
+	@Column
 	private List<Disciplina> disciplinas;
 
 	public Integer getCodigo() {
